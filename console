@@ -1,0 +1,24 @@
+#!/usr/bin/env php
+<?php
+
+define('APP_ROOT', getcwd());
+
+require __DIR__.'/vendor/autoload.php';
+
+use Symfony\Component\Console\Application;
+use Smalot\Minotor\Command\ClientSend;
+use Smalot\Minotor\Command\ClientStore;
+use Smalot\Minotor\Command\ServerStart;
+use Smalot\Minotor\Command\ServerStatus;
+use Smalot\Minotor\Command\ServerStop;
+
+$application = new Application();
+
+// Register commands.
+$application->add(new ClientSend());
+$application->add(new ClientStore());
+$application->add(new ServerStart());
+$application->add(new ServerStatus());
+$application->add(new ServerStop());
+
+$application->run();

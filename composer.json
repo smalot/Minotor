@@ -1,0 +1,23 @@
+{
+    "name": "smalot/minotor",
+    "description": "Monitoring API (Client / Server)",
+    "keywords": ["monitoring", "client", "server", "api"],
+    "homepage": "https://github.com/clue/php-socket-raw",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Sebastien Malot",
+            "email": "sebastien@malot.fr"
+        }
+    ],
+    "require": {
+        "clue/socket-raw": "^1.2",
+        "symfony/console": "^3.1",
+        "symfony/yaml": "^3.1"
+    },
+    "autoload": {
+        "psr-4": {"Smalot\\Minotor\\": "src"}
+    },
+    "minimum-stability": "stable"
+}
